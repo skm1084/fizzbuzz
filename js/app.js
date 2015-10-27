@@ -2,15 +2,14 @@ function checkNumber() {
 var number = prompt('Please enter a number', '1-100');
 //alert (isNaN(number));
 	//var x = isNaN(number);
-	if (number == true){
-		myFunction();
-	} else if(isNaN(number)){
-		prompt("Please enter a real number");
-	} else
+	if(isNaN(number)){
+		alert("Please enter a real number");
 		checkNumber();
+	} else {
+		myFunction(number);}
 }
 
-	function myFunction(){
+	function myFunction(number){
 		console.log(number);
 		for (var i = 1; i <= parseInt(number); i++) {
 		   var string = '';
@@ -29,5 +28,5 @@ var number = prompt('Please enter a number', '1-100');
 		    console.log(string);
 		}	
 	}	
-//myFunction(number);
+checkNumber();
 
